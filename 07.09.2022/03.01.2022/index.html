@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Strona główna | Znaki zodiaku</title>
+        <link rel="stylesheet" href="style.css">
+        <SPAN id="Data" style="POSITION: absolute; LEFT: 0; TOP: 0; FONT-SIZE: 10pt;
+FONT-WEIGHT: bold; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial;"></SPAN>
+<script>
+// Autor skryptu: Mariusz Dziawa
+// E-mail: marxx@go2.pl
+//
+function czas() {
+
+ if (!document.layers&&!document.getElementById&&!document.all)
+ return
+
+  var godzina, minuty, sekundy, dzien, licz_dzien, miesiac, dzisiaj, rok, tekst_miesiac, tekst_dzien;
+  dzisiaj = new Date();
+  godzina=dzisiaj.getHours();
+  minuty=dzisiaj.getMinutes();
+  sekundy=dzisiaj.getSeconds();
+  rok=dzisiaj.getYear();
+  dzien=dzisiaj.getDate();
+  licz_dzien=dzisiaj.getDay();
+  if (licz_dzien==0) {tekst_dzien="Niedziela"}
+  if (licz_dzien==1) {tekst_dzien="Poniedziałek"}
+  if (licz_dzien==2) {tekst_dzien="Wtorek"}
+  if (licz_dzien==3) {tekst_dzien="Środa"}
+  if (licz_dzien==4) {tekst_dzien="Czwartek"}
+  if (licz_dzien==5) {tekst_dzien="Piątek"}
+  if (licz_dzien==6) {tekst_dzien="Sobota"}
+  miesiac=dzisiaj.getMonth()+1;
+  if (miesiac==1) {tekst_miesiac="stycznia"}
+  if (miesiac==2) {tekst_miesiac="lutego"}
+  if (miesiac==3) {tekst_miesiac="marca"}
+  if (miesiac==4) {tekst_miesiac="kwietnia"}
+  if (miesiac==5) {tekst_miesiac="maja"}
+  if (miesiac==6) {tekst_miesiac="czerwca"}
+  if (miesiac==7) {tekst_miesiac="lipca"}
+  if (miesiac==8) {tekst_miesiac="sierpnia"}
+  if (miesiac==9) {tekst_miesiac="września"}
+  if (miesiac==10) {tekst_miesiac="października"}
+  if (miesiac==11) {tekst_miesiac="listopada"}
+  if (miesiac==12) {tekst_miesiac="grudnia"}
+         if ((rok>=00) && (rok<=1900)) {rok=1900+rok;}
+         if (miesiac < 10) {miesiac="0"+miesiac;}
+ 	 if (dzien < 10) {dzien="0"+dzien;}
+ 	 if (godzina < 10) {godzina="0"+godzina;}
+         if (minuty < 10) {minuty="0"+minuty;}
+ 	 if (sekundy < 10) {sekundy="0"+sekundy;}
+  pelnyczas=tekst_dzien + ", " + dzien + " " + tekst_miesiac + " "+rok+"<br>"
+  	+ godzina+":"+minuty+":"+sekundy;
+
+
+if (document.getElementById){
+document.getElementById("Data").innerHTML=pelnyczas
+}
+else if (document.layers){
+document.layers.Data.document.write(pelnyczas)
+}
+else if (document.all)
+Data.innerHTML=pelnyczas
+
+// Czestotliwosc odswiezania
+setTimeout("czas()",500)
+}
+
+</script>
+
+    </head>
+<body onLoad="czas()">
+    <a href="index.html"><h1 style="color: rgb(180, 180, 180); position: absolute; font-family: 'Comic Sans MS'; font-size: 30px; padding: 55px; padding-top: 50px; padding-left: 100px; ">Znaki zodiaku</h1></a>
+    <nav>
+        <ul> 
+            <li><a href="index.html">Strona główna</a></li>
+            <li id="nav-item-2"><a style="color:rgb(209, 93, 255)!important;" href="index.html">Aktualnie: Strona główna</a></li>
+        </ul> 
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="container">
+        <a href="baran.html"><p id="baran-text">Baran (21 marca – 19 kwietnia)</p></a>
+        <div id="baran">
+            <a href="baran.html"><img src="img/Baran.png" width="240px" height="240px"></a>
+        </div>
+        <a href="byk.html"><p id="byk-text">Byk (20 kwietnia – 20 maja)</p></a>
+        <div id="byk">
+            <a href="byk.html"><img src="img/Byk.png" width="240px" height="240px"></a>
+        </div>
+        <a href="bliznieta.html"><p id="bliznieta-text">Bliźnięta (21 maja – 20 czerwca)</p></a>
+        <div id="bliznieta">
+            <a href="bliznieta.html"><img src="img/Bliznieta.png" width="240px" height="240px"></a>
+        </div>
+        <a href="rak.html"><p id="rak-text">Rak (21 czerwca - 22 lipca)</p></a>
+        <div id="rak">
+            <a href="rak.html"><img src="img/rak.png" width="240px" height="240px"></a>
+        </div>
+        <a href="lew.html"><p id="lew-text">Lew (23 lipca - 22 sierpnia)</p></a>
+        <div id="lew">
+            <a href="lew.html"><img src="img/lew.png" width="240px" height="240px"></a>
+        </div>
+        <a href="panna.html"><p id="panna-text">Panna (23 sierpnia - 22 września)</p></a>
+        <div id="panna">
+            <a href="panna.html"><img src="img/panna.png" width="240px" height="240px"></a>
+        </div>
+        <a href="waga.html"><p id="waga-text">Waga (23 września - 22 października)</p></a>
+        <div id="waga">
+            <a href="waga.html"><img src="img/waga.png" width="240px" height="240px"></a>
+        </div>
+        <a href="skorpion.html"><p id="skorpion-text">Skorpion (23 października - 21 listopada)</p></a>
+        <div id="skorpion">
+            <a href="skorpion.html"><img src="img/skorpion.png" width="240px" height="240px"></a>
+        </div>
+        <a href="strzelec.html"><p id="strzelec-text">Strzelec (22 listopada - 21 grudnia)</p></a>
+        <div id="strzelec">
+            <a href="strzelec.html"><img src="img/strzelec.png" width="240px" height="240px"></a>
+        </div>
+        <a href="koziorozec.html"><p id="koziorozec-text">Koziorożec (22 grudnia - 19 stycznia)</p></a>
+        <div id="koziorozec">
+            <a href="koziorozec.html"><img src="img/koziorozec.png" width="240px" height="240px"></a>
+        </div>
+        <a href="wodnik.html"><p id="wodnik-text">Wodnik (20 stycznia - 18 lutego)</p></a>
+        <div id="wodnik">
+            <a href="wodnik.html"><img src="img/wodnik.png" width="240px" height="240px"></a>
+        </div>
+        <a href="ryby.html"><p id="ryby-text">Ryby (19 lutego - 20 marca)</p></a>
+        <div id="ryby">
+            <a href="ryby.html"><img src="img/ryby.png" width="240px" height="240px"></a>
+        </div>
+    </div>
+    <footer>
+        <h6>COPYRIGHT 2022 ZNAKI ZODIAKU</h6>
+        <h5>WSZELKIE PRAWA ZASTRZEŻONE</h5>
+    </footer>
+</body>
+</html>

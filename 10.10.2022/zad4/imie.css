@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+li {
+    display: inline;
+    left: 80px;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    
+}
+.imie {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+}
+a {
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+    font-family: Comic Sans MS;
+    transition: color 1s ease;
+}
+a:hover {
+    color: rgb(255, 255, 255);
+}
+html, body {
+    scroll-behavior: smooth;
+}
